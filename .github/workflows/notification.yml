@@ -3,7 +3,6 @@ name: Notification
 on:
   workflow_run:
     workflows: ["Deploy Example to Github Pages", "Publish Package to npmjs"]
-    branches: ["master"]
     types: [completed]
 
 jobs:
