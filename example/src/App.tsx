@@ -34,7 +34,7 @@ function App() {
             })
           }
         >
-          count is {count}
+          increment by shared worker {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
