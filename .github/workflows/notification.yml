@@ -1,0 +1,19 @@
+name: Notification
+
+on:
+  workflow_run:
+    workflows: ["Deploy Example to Github Pages"]
+    branches: ["master"]
+    types: [completed, in_progress, requested]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Workflow Status to Matrix
+        uses: onichandame/matrix-ci-bot@master
+        with:
+          room-id: ${{ secrets.ROOM_ID }}
+          homeserver-url: ${{ secrets.HOMESERVER }}
+          username: ${{ secrets.CI_BOT_USERNAME }}
+          password: ${{ secrets.CI_BOT_PASSWORD }}
