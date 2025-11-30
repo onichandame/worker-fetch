@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["Deploy Example to Github Pages"]
     branches: ["master"]
-    types: [completed, in_progress, requested]
+    types: [completed]
 
 jobs:
   notify:
