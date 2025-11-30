@@ -1,0 +1,33 @@
+{
+  "name": "@onichandame/worker-fetch",
+  "version": "0.0.0",
+  "description": "A fetch-like experience with inter-worker communication",
+  "keywords": [
+    "worker",
+    "fetch",
+    "browser"
+  ],
+  "homepage": "https://github.com/onichandame/worker-fetch#readme",
+  "bugs": {
+    "url": "https://github.com/onichandame/worker-fetch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onichandame/worker-fetch.git"
+  },
+  "license": "MIT",
+  "author": "onichandame",
+  "type": "module",
+  "main": "dist/index",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc",
+    "format": "dprint fmt"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/sharedworker": "^0.0.196",
+    "dprint": "^0.50.2",
+    "typescript": "^5.9.3"
+  }
+}
