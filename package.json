@@ -19,6 +19,10 @@
   "author": "onichandame",
   "type": "module",
   "main": "dist/index",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "test": "vitest run",
     "build": "tsc",
