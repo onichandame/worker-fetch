@@ -14,18 +14,17 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Dependencies
-        run: npm i
+        run: npm ci
 
       - name: Build
         run: npm run build
 
       - name: Build Example
         working-directory: ./example
-        run: npm run build
+        run: npm ci && npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./example/dist
